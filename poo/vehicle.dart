@@ -2,9 +2,10 @@
 class Vehicle {
   String brand;
   int year;
+  int wheels;
 
   // Constructor
-  Vehicle(this.brand, this.year);
+  Vehicle(this.brand, this.year, this.wheels);
 
   // Método que puede ser sobrescrito
   void start() {
