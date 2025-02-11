@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'Controllers/add_task.dart';
+import 'Controllers/delete_task.dart';
 import 'Controllers/show_task.dart';
 
 void main() {
@@ -35,6 +36,9 @@ void main() {
 
     case '3':
       print('Seleccionaste la opcion Eliminar una tarea');
+      print('pon el nombre de la tarea que deseas eliminar');
+      final name = stdin.readLineSync() ?? '';
+      eliminarTarea(name);
       break;
 
     default:
