@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'Controllers/add_task.dart';
+
 void main() {
   /*
   Proyecto => abstraccion
@@ -24,6 +26,7 @@ void main() {
 
     case '2':
       print('Seleccionaste la opcion Agregar una tarea');
+      agregarTarea();
       break;
 
     case '3':

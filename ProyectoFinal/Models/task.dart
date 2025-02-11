@@ -36,4 +36,8 @@ class Task implements Project {
   deleteSubTask(int index) {
     subTasks.removeAt(index);
   }
+
+  String convertToString(Task task) {
+    return '$name|$description|$state';
+  }
 }
