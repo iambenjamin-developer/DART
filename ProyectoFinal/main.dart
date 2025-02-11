@@ -45,4 +45,9 @@ void main() {
       print('La opcion no existe');
       break;
   }
+
+  if (Platform.isWindows) {
+    print('presiones enter para salir');
+    stdin.readLineSync();
+  }
 }
