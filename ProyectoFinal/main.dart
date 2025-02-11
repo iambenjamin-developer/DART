@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'Controllers/add_task.dart';
+import 'Controllers/show_task.dart';
 
 void main() {
   /*
@@ -22,6 +23,9 @@ void main() {
   switch (input) {
     case '1':
       print('Seleccionaste la opcion Ver una tarea');
+      print('pon el nombre de la tarea que deseas ver');
+      final name = stdin.readLineSync() ?? '';
+      verTarea(name);
       break;
 
     case '2':
