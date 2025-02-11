@@ -12,6 +12,10 @@ void main() {
   try {
     if (textFile.existsSync()) {
       final content = textFile.readAsStringSync();
+
+      final newContent = 'Hola mundo';
+      textFile.writeAsStringSync('${content}\n${newContent}');
+
       print('''El contenido es:
       ${content}''');
     } else {
