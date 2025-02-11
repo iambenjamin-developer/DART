@@ -7,21 +7,31 @@ void main() {
   Subtarea
    */
 
-  final textFile = File('./tareas.txt');
+  print('''
+==============Bienvenido a la aplicacion==============
+=============Selecciona una opcion================
+  1. Ver una tarea
+  2. Agregar una tarea
+  3. Eliminar una tarea
+  ''');
 
-  try {
-    if (textFile.existsSync()) {
-      final content = textFile.readAsStringSync();
+  final input = stdin.readLineSync();
 
-      final newContent = 'Hola mundo';
-      textFile.writeAsStringSync('${content}\n${newContent}');
+  switch (input) {
+    case '1':
+      print('Seleccionaste la opcion Ver una tarea');
+      break;
 
-      print('''El contenido es:
-      ${content}''');
-    } else {
-      print('El archivo ${textFile.path} no existe');
-    }
-  } catch (e) {
-    print('Ocurrio un error ${e.toString()}');
+    case '2':
+      print('Seleccionaste la opcion Agregar una tarea');
+      break;
+
+    case '3':
+      print('Seleccionaste la opcion Eliminar una tarea');
+      break;
+
+    default:
+      print('La opcion no existe');
+      break;
   }
 }
